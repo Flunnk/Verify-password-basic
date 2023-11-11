@@ -1,27 +1,20 @@
-function sumar() {
-  const num1 = document.getElementById("num1").value;
-  const num2 = document.getElementById("num2").value;
-  const resultado = parseInt(num1) + parseInt(num2);
-  document.getElementById("resultado").innerHTML = resultado;
-}
+window.onload = function() {
+  const btnCalcular = document.getElementById("btnCalcular");
+  btnCalcular.addEventListener("click", contarParesImpares);
 
-function restar() {
-  const num1 = document.getElementById("num1").value;
-  const num2 = document.getElementById("num2").value;
-  const resultado = parseInt(num1) - parseInt(num2);
-  document.getElementById("resultado").innerHTML = resultado;
-}
+  function contarParesImpares() {
+      const num1 = document.getElementById("num1").value;
+      const num2 = document.getElementById("num2").value;
 
-function multiplicar() {
-  const num1 = document.getElementById("num1").value;
-  const num2 = document.getElementById("num2").value;
-  const resultado = parseInt(num1) * parseInt(num2);
-  document.getElementById("resultado").innerHTML = resultado;
-}
+      let contador = 0;
 
-function dividir() {
-  const num1 = document.getElementById("num1").value;
-  const num2 = document.getElementById("num2").value;
-  const resultado = parseInt(num1) / parseInt(num2);
-  document.getElementById("resultado").innerHTML = resultado;
+      for (let i = num1; i <= num2; i++) {
+          if (i % 2 !== 0) {
+              contador++;
+          }
+      }
+
+      document.getElementById("resultado")
+        .innerHTML = `Número impares: ${contador}`;
+  }
 }
