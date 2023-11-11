@@ -2,16 +2,23 @@
 <html>
   <head>
     <title>Hello World</title>
+    <meta charset="utf-8">
     <script src="ejercicios.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <h1>Contador de número pares e impares</h1>
-    <p>Introduce un número y te diré cuantos números pares e impares hay entre 1 y ese número.</p>
-    <p>Primer número</p>
-    <input type="nummber" id="num1" />
-    <p>Segundo número</p>
-    <input type="number" id="num2" />
-    <button id="btnCalcular">Contar</button>
-    <p id="resultado"></p>
+    <h1>Verificar contraseña</h1>
+    <h3>Introduce tu contraseña</h3>
+    <input id="pass">
+    <button onclick="verificarContraseña()">Verificar</button>
+    <p id="resultado-long"></p>
+    <p id="resultado-mayus"></p>
+    <p id="resultado-min"></p>
+    <p id="resultado-num"></p>
   </body>
 </html>
